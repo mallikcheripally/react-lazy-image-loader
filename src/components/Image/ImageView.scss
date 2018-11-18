@@ -1,0 +1,45 @@
+.image-view-container {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  border-radius: 10px;
+  background: #082e4b;
+  box-shadow: 0 5px 50px 20px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .image-info-box {
+    width: 220px;
+    padding: 10px;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+
+    .image-info {
+      text-align: left;
+      color: #ffffff;
+      font-size: 13px;
+      text-overflow: ellipsis;
+
+      a {
+        color: #ffffff;
+      }
+    }
+  }
+
+  .default-placeholder-message {
+    position: absolute;
+    color: #ffffff;
+    font-size: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

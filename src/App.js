@@ -1,25 +1,18 @@
+// @flow
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-class App extends Component {
+import './App.scss';
+import LazyImages from './containers/LazyImages/LazyImages';
+
+type Props = {};
+
+type State = {};
+
+class App extends Component<Props, State> {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <LazyImages />
       </div>
     );
   }
