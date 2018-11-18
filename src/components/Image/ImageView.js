@@ -16,6 +16,7 @@ const ImageView = (props: Props) => {
       {image ? (
         <>
           <img src={image.url} alt={image.title} />
+
           <div className={'image-info-box'}>
             <div className="image-info">{image.title}</div>
             <div className="image-info">

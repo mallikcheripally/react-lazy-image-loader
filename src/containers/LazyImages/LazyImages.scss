@@ -1,6 +1,12 @@
 .lazy-images-container {
+  h1.app-title {
+    font-size: 24px;
+    color: #082e4b;
+    margin-top: 75px;
+  }
+
   .image-view-custom {
-    margin: 100px auto 0 auto;
+    margin: 0 auto;
   }
 }
 
@@ -64,6 +70,20 @@ button.image-navigation-control {
     i.material-icons {
       line-height: inherit;
       color: #02b7df;
+      font-size: 32px;
+    }
+  }
+}
+
+.developer-info-box {
+  margin-top: 40px;
+  .developer-info {
+    color: #082e4b;
+    font-size: 14px;
+    font-weight: 500;
+
+    a {
+      color: #082e4b;
     }
   }
 }

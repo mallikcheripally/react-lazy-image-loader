@@ -16,6 +16,7 @@ type State = {
   imageLoopingId: any,
   imageDownloadInProgress: boolean
 };
+
 class LazyImages extends Component<Props, State> {
   state = {
     images: [],
@@ -89,7 +90,7 @@ class LazyImages extends Component<Props, State> {
     await axios
       .get(API.GET_IMAGE_LIST)
       .then(response => {
-        console.log(response);
+        // console.log(response);
         let data = null;
         if (response && Array.isArray(response.data) && response.data.length) {
           data = response.data;
@@ -202,7 +203,7 @@ class LazyImages extends Component<Props, State> {
               : 'NA'}
           </div>
           <div className="request-status-message">
-            Total Downloaded {this.state.loadedImageCount}
+            Downloaded Images {this.state.loadedImageCount}
           </div>
           {this.state.imageDownloadInProgress && (
             <div className="request-status-message">
@@ -210,6 +211,8 @@ class LazyImages extends Component<Props, State> {
             </div>
           )}
         </div>
+
+        <h1 className="app-title">React - Lazy Image Loader</h1>
 
         <ImageView
           className={'image-view-custom'}
@@ -251,6 +254,27 @@ class LazyImages extends Component<Props, State> {
           >
             <i className={'material-icons'}>skip_next</i>
           </button>
+        </div>
+
+        <div className={'developer-info-box'}>
+          <div className="developer-info">
+            Developed by{' '}
+            <a
+              href="https://mallikcheripally.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Mallik Cheripally
+            </a>
+            &nbsp;&nbsp;&nbsp; •&nbsp;&nbsp;&nbsp;Source code available on{' '}
+            <a
+              href="https://github.com/mallikcheripally/react-lazy-image-loader"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Github
+            </a>
+          </div>
         </div>
       </div>
     );
