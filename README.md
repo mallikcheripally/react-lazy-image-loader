@@ -1,6 +1,8 @@
 ## Lazy Image Loading
 A small app to lazy and progressive load images in React.js
 
+Here's a [demo](https://react-lazy-image-loader.firebaseapp.com/) for you!
+
 ### How does it work?
 The app requires an array of image items (store them locally or pull them from an API) as argument, which contains image URLs. On the first load the image downloads the first image immediately and requests further images to store in the browser cache. Once the image slideshow starts and during the slideshow if the threshold limit hits and only fewer images are left for the slideshow, the library requests for more images. Simple!
 

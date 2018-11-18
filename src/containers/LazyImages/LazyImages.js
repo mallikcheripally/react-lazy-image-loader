@@ -30,10 +30,6 @@ class LazyImages extends Component<Props, State> {
 
   componentDidMount(): void {
     this.getImages().then(() => {
-      // this.setSelectedImage(this.state.images[0], 0);
-      // this.setState({
-      //   loadedImageCount: 1
-      // });
       this.startAutomaticImageLoading();
       this.loadImages(1);
     });
